@@ -1,0 +1,26 @@
+$(document).ajaxError(function(e, xhr) {
+		switch (xhr.status) {
+		case '403':
+			top.location.href = contextPath + "/error/403";
+			break;
+		case '404':
+			top.location.href = contextPath + "/error/404";
+			break;
+		case '500':
+			top.location.href = contextPath + "/error/500";
+			break;
+		default:
+			top.location.href = contextPath + "/error/500";
+			break;
+		}
+});
+已经在通用jar包ebiz-web-base.jar(0.1.1或以上版本)中配置了与上述错误页面对应的静态controller view：
+<mvc:view-controller path="/error/403" view-name="error.403View"/>
+<mvc:view-controller path="/error/404" view-name="error.404View"/>
+<mvc:view-controller path="/error/500" view-name="error.500View"/>
+各个项目需要在自己的tiles配置文件中加入上述3个view-name对应的jsp错误页面的配置，比如：
+<definition name="error.403View" template="/WEB-INF/views/echannel/common/error/403.jsp"></definition>
+<definition name="error.404View" template="/WEB-INF/views/echannel/common/error/404.jsp"></definition>
+<definition name="error.500View" template="/WEB-INF/views/echannel/common/error/500.jsp"></definition>
+最后在template指向的目录下放入jsp页面就OK了，这样在页面所有的ajax调用一旦抛错，不需要手动去加入
+error:function(){...}这样的语句来手动处理错误

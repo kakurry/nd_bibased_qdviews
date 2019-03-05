@@ -1,0 +1,28 @@
+.errorClass
+{
+ 	background: url(../../common/images/onError.gif) no-repeat 0 -3px;
+    padding:1px 0px 2px 18px; 
+    padding-left:20px;
+	font-size: 12px;
+	height:22px; 
+	line-height:22px; 
+	vertical-align:middle;
+	color:#ff0000;
+}
+.focusClass
+{
+    background: url(../../common/images/onFocus.gif) no-repeat 0 -3px;
+    vertical-align:middle;
+	color:#666666;
+}
+.validClass
+{
+	vertical-align:middle;
+	background: url(../../common/images/onFocus.gif) no-repeat 0 -3px;
+	color:#666666;
+}
+.hideClass
+{
+    background: none;
+    padding: 0;
+}

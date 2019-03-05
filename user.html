@@ -1,0 +1,1251 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>客户信息管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <!-- chart -->
+    <script src="js/Chart.js"></script>
+    <!-- //chart -->
+    <!--animate-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--//end-animate-->
+    <!----webfonts--->
+    <link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!---//webfonts--->
+    <!-- Meters graphs -->
+    <!--<script src="js/jquery-1.10.2.min.js"></script>-->
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <!--<link href="common/scripts/bootstrap3.3/css/bootstrap.css" rel="stylesheet">-->
+    <link href="common/scripts/bootstrap3.3/bootstrap-table/bootstrap-table.css" rel="stylesheet">
+    <link href="common/scripts/bootstrap3.3/bootstrapValidator/css/bootstrapValidator.min.css" rel="stylesheet">
+    <link href="common/scripts/bootstrap3.3/jquery-confirm/css/jquery-confirm.css" rel="stylesheet">
+    <link href="common/scripts/layui/css/layui.css" rel="stylesheet">
+    <link href="common/scripts/jquery_mloading/jquery.mloading.css" rel="stylesheet">
+    <script src="common/scripts/My97DatePicker/WdatePicker.js"></script>
+    <script src="common/scripts/common-util.js"></script>
+    <script src="common/scripts/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="common/scripts/bootstrap3.3/js/bootstrap.js"></script>-->
+    <script src="common/scripts/bootstrap3.3/bootstrapValidator/js/bootstrapValidator.min.js"></script>
+    <script src="common/scripts/bootstrap3.3/bootstrap-table/bootstrap-table.js"></script>
+    <script src="common/scripts/bootstrap3.3/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="common/scripts/bootstrap3.3/bootstrap-table/bootstrap-table-export/bootstrap-table-export.js"></script>
+    <script src="common/scripts/bootstrap3.3/bootstrap-table/bootstrap-table-export/tableExport.min.js"></script>
+    <script src="common/scripts/bootstrap3.3/jquery-confirm/js/jquery-confirm.js"></script>
+    <script src="common/scripts/jquery_mloading/jquery.mloading.js"></script>
+    <script src="common/scripts/layui/layui.all.js"></script>
+    <style type="text/css">
+        .bootstrap-table .fixed-table-container{
+            /*40 * 5(5行总高) + 41(标题高度40 + 标题 1 border-top) + 2(自身 1 border-top + 1 border-bottom)*/
+            height:350px!important;
+        }
+        .bootstrap-table .fixed-table-container tr{
+            /*行高*/
+            height:40px!important;
+        }
+    </style>
+</head>
+
+<body class="sticky-header left-side-collapsed"  onload="initMap()">
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <h1><a href="index.html">药品 <span>数据管理</span></a></h1>
+        </div>
+        <div class="logo-icon text-center">
+            <a href="index.html"><i class="lnr lnr-home"></i> </a>
+        </div>
+
+        <!--logo and iconic logo end-->
+        <div class="left-side-inner">
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li><a href="index.html"><i class="lnr lnr-power-switch"></i><span>首页</span></a></li>
+                <li class="menu-list"><a href="#"><i class="glyphicon glyphicon-user"></i><span>管理员管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="guanliyuan.html">管理员信息管理</a> </li>
+                        <li><a href="guanliyuanpass.html">审核通过管理员信息管理</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href="#"><i class="glyphicon glyphicon-user"></i> <span>客户管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="user.html">客户信息管理</a> </li>
+                        <li><a href="userpass.html">审核通过客户信息管理</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href="#"><i class="lnr lnr-indent-increase"></i> <span>供应商信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="gongyingshang.html">供应商信息管理</a> </li>
+                        <li><a href="gongyingshangpass.html">审核通过供应商信息管理</a> </li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href="#"><i class="lnr lnr-indent-increase"></i> <span>药品库存信息管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="yao.html">药品信息管理</a> </li>
+                        <li><a href="yaopass.html">审核通过药品信息管理</a> </li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href="#"><i class="lnr lnr-indent-increase"></i> <span>销售管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="yaocar.html">商品销售信息管理</a> </li>
+                        <li><a href="yaotuihuo.html">商品退货信息管理</a> </li>
+                    </ul>
+                </li>
+
+
+                <li class="menu-list"><a href="#"><i class="lnr lnr-book"></i>  <span>登录/注册</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="sign-in.html">登录</a> </li>
+                        <li><a href="sign-up.html">注册</a></li>
+                        <li><a href="blank_page.html">报错</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="zhuxiao()"><i class="lnr lnr-spell-check"></i> <span>注销</span></a></li>
+            </ul>
+            <!--sidebar nav end-->
+        </div>
+    </div>
+    <!-- left side end-->
+
+    <!-- main content start-->
+    <div class="main-content" style="background-color: white;">
+        <!-- header-starts -->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn  menu-collapsed"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <div class="user-panel-top">
+                    <div class="profile_details_left">
+                        <ul class="nofitications-dropdown">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <div class="notification_header">
+                                            <h3>You have 3 new messages</h3>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="notification_desc">
+                                            <p>Lorem ipsum dolor sit amet</p>
+                                            <p><span>1 hour ago</span></p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </a></li>
+                                    <li class="odd"><a href="#">
+                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="notification_desc">
+                                            <p>Lorem ipsum dolor sit amet </p>
+                                            <p><span>1 hour ago</span></p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="notification_desc">
+                                            <p>Lorem ipsum dolor sit amet </p>
+                                            <p><span>1 hour ago</span></p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </a></li>
+                                    <li>
+                                        <div class="notification_bottom">
+                                            <a href="#">See all messages</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="login_box" id="loginContainer">
+                                <div class="search-box">
+                                    <div id="sb-search" class="sb-search">
+                                        <form>
+                                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" id="search">
+                                            <input class="sb-search-submit" type="submit" value="">
+                                            <span class="sb-icon-search"> </span>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- search-scripts -->
+                                <script src="js/classie.js"></script>
+                                <script src="js/uisearch.js"></script>
+                                <script>
+                                    new UISearch( document.getElementById( 'sb-search' ) );
+                                </script>
+                                <!-- //search-scripts -->
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <div class="notification_header">
+                                            <h3>You have 3 new notification</h3>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="notification_desc">
+                                            <p>Lorem ipsum dolor sit amet</p>
+                                            <p><span>1 hour ago</span></p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </a></li>
+                                    <li class="odd"><a href="#">
+                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="notification_desc">
+                                            <p>Lorem ipsum dolor sit amet </p>
+                                            <p><span>1 hour ago</span></p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="notification_desc">
+                                            <p>Lorem ipsum dolor sit amet </p>
+                                            <p><span>1 hour ago</span></p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </a></li>
+                                    <li>
+                                        <div class="notification_bottom">
+                                            <a href="#">See all notification</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">22</span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <div class="notification_header">
+                                            <h3>You have 8 pending task</h3>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">
+                                        <div class="task-info">
+                                            <span class="task-desc">Database update</span><span class="percentage">40%</span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="progress progress-striped active">
+                                            <div class="bar yellow" style="width:40%;"></div>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="task-info">
+                                            <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                        <div class="progress progress-striped active">
+                                            <div class="bar green" style="width:90%;"></div>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="task-info">
+                                            <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="progress progress-striped active">
+                                            <div class="bar red" style="width: 33%;"></div>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="task-info">
+                                            <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="progress progress-striped active">
+                                            <div class="bar  blue" style="width: 80%;"></div>
+                                        </div>
+                                    </a></li>
+                                    <li>
+                                        <div class="notification_bottom">
+                                            <a href="#">See all pending task</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </div>
+                    <div class="profile_details">
+                        <ul>
+                            <li class="dropdown profile_details_drop">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <div class="profile_img" id="dongtaiuser">
+                                        <!--<span style="background:url(images/1.jpg) no-repeat center"> </span>
+                                         <div class="user-name" id="dongtaiuser">
+                                            &lt;!&ndash;<p>Michael<span>Administrator</span></p>&ndash;&gt;
+                                         </div>
+                                         <i class="lnr lnr-chevron-down"></i>
+                                         <i class="lnr lnr-chevron-up"></i>
+                                        <div class="clearfix"></div>	-->
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu drp-mnu">
+                                    <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
+                                    <li> <a href="#"><i class="fa fa-user"></i>Profile</a> </li>
+                                    <li> <a href="sign-up.html"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                                </ul>
+                            </li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!--notification menu end -->
+        </div>
+        <!-- //header-ends -->
+        <div id="page-wrapper" style="background-color: white;">
+
+            <div class="panel-body" style="padding-bottom:0px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color: #F5F5F5;border: 1px solid #CCCCCC !important;">查询条件</div>
+                    <div class="panel-body" style="width:100%;border-left: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;border-bottom: 1px solid #CCCCCC; ">
+                        <form id="searchConditionForm" name="searchConditionForm" class="form-horizontal">
+                            <div class="input-group input-group-sm  col-md-11 col-sm-11 col-xs-11 col-lg-11"style="margin: 0px;padding: 0px;">
+                                <span class="input-group-addon" id="sizing-addon2" >姓名：</span>
+                                <input type="text" class="form-control"  name="nameHH" id="nameHH" placeholder="请输入..." aria-describedby="sizing-addon2" style="width: 110px">
+
+                                <span class="input-group-addon" id="sizing-addon2">昵称：</span>
+                                <input type="text" class="form-control"  name="nichengHH" id="nichengHH"  placeholder="请输入..." aria-describedby="sizing-addon2" style="width: 110px">
+
+                                <span class="input-group-addon" id="sizing-addon2">地址：</span>
+                                <input type="text" class="form-control"  name="addressHH" id="addressHH" placeholder="请输入..." aria-describedby="sizing-addon2" style="width: 110px">
+
+                                <span class="input-group-addon" id="sizing-addon2">电话号码：</span>
+                                <input type="text" class="form-control"  name="telephoneHH" id="telephoneHH"  placeholder="请输入..." aria-describedby="sizing-addon2" style="width: 110px">
+
+
+                                <span class="input-group-addon" id="sizing-addon2">审核情况：</span>
+                                <select class="form-control" name="auditorHH" id="auditorHH" aria-describedby="sizing-addon2" style="width: 110px">
+                                    <option value="">请选择</option>
+                                    <option value="0">审核未通过</option>
+                                    <option value="1">通过</option>
+                                </select>
+                                <span class="input-group-btn ">
+                                <button class="btn btn-primary" type="button" id="search" onclick="searchDatas();"><span class="glyphicon glyphicon-zoom-in"></span>查 &nbsp;&nbsp;&nbsp;询</button>
+                                <button class="btn btn-primary" type="button" id="resetFrom" onclick="resetSearchConditions();"><span class="glyphicon glyphicon-remove"></span>重&nbsp;&nbsp;&nbsp;&nbsp;置</button>
+                              </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="toolbar" class="btn-group">
+            <button id="btn_addOpt" type="button" class="btn btn-default"
+                    onclick="addFun();">
+			<span
+                    style="display: inline-block; vertical-align: middle; margin-right: 3px;"
+                    class="ui-icon ui-icon-circle-plus glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+            </button>
+            <button id="btn_updateOpt" type="button" class="btn btn-default"
+                    onclick="updateFun();">
+			<span
+                    style="display: inline-block; vertical-align: middle; margin-right: 3px;"
+                    class="ui-icon ui-icon-pencil glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+            </button>
+            <button id="btn_delOpt" type="button" class="btn btn-default"
+                    onclick="deleteFun();">
+			<span
+                    style="display: inline-block; vertical-align: middle; margin-right: 3px;"
+                    class="ui-icon ui-icon-trash glyphicon glyphicon-trash" aria-hidden="true"></span>删除
+            </button>
+            <button id="shenhe_pt" type="button" class="btn btn-default"
+                    onclick="shenhe();">
+			<span
+                    style="display: inline-block; vertical-align: middle; margin-right: 3px;"
+                    class="ui-icon ui-icon-trash 	glyphicon glyphicon-ok" aria-hidden="true"></span>审核
+            </button>
+        </div>
+
+        <div style="margin: 0 30px;background-color: white;">
+            <table id="tb_roles" >
+            </table>
+        </div>
+
+        <style type="text/css">
+            .modal-backdrop {
+                z-index: 0;;
+            }
+        </style>
+
+
+        <!-- 新增信息 start -->
+        <!-- 模态框（Modal） -->
+        <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-lg">
+                <form class="form-horizontal" role="form" id="infoForm" name="infoForm" method="POST">
+                    <div class="modal-content"style="position: relative;left: -160px;top: 70px;width: 1200px;height: 500px;">
+                        <div class="modal-header " style="color: #333; background-color: #f5f5f5; border-color: #ddd;">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">客户信息新增/修改</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" name="id" id="id" />
+                            <input type="hidden" name="auditor" id="auditor" />
+                            <input type="hidden" name="statuss" id="statuss" />
+                            <input type="hidden" name="auditorstatus" id="auditorstatus" />
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="name" class="col-sm-2 control-label"><span style="color:red; font-weight:bold;">*</span>姓名：</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="请输入..." aria-describedby="sizing-addon2" />
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                    <label for="nicheng" class="col-sm-2 control-label">昵称：</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" name="nicheng" id="nicheng" placeholder="请输入..." aria-describedby="sizing-addon2" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="password" class="col-sm-2 control-label"><span style="color:red; font-weight:bold;">*</span>密码：</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" name="password" id="password"  placeholder="请输入..." aria-describedby="sizing-addon2" />
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                    <label for="telephone" class="col-sm-2 control-label"><span style="color:red; font-weight:bold;">*</span>电话号码：</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" name="telephone" id="telephone" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="请输入..." aria-describedby="sizing-addon2" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="images" class="col-sm-2 control-label"><span style="color:red; font-weight:bold;">*</span>顾客图片：</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" name="images" id="images" placeholder="请输入..." aria-describedby="sizing-addon2" />
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                    <label for="email" class="col-sm-2 control-label"><span style="color:red; font-weight:bold;">*</span>邮箱：</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" name="email" id="email"  placeholder="请输入..." aria-describedby="sizing-addon2" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group" style="display:none">
+                                <div class="row" >
+                                    <label for="createTime" class="col-sm-2 control-label">创建时间：</label>
+                                    <div class="col-sm-3">
+                                        <input name="createTime" id="createTime" type="text" readonly="readonly" class="form-control" onclick="WdatePicker({onpicked:validateTimes});" />
+                                    </div>
+                                    <label for="updateTime" class="col-sm-3 control-label">修改时间:</label>
+                                    <div class="col-sm-3">
+                                        <input name="updateTime" id="updateTime" type="text" readonly="readonly" class="form-control" onclick="WdatePicker({onpicked:validateTimes});" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="address" class="col-sm-2 control-label"><span style="color:red; font-weight:bold;">*</span>家庭住址：</label>
+                                    <div class="col-sm-9">
+                                        <textarea class="form-control" name="address" id="address" rows="2" placeholder="请输入..." style="resize: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="description" class="col-sm-2 control-label">描述：</label>
+                                    <div class="col-sm-9">
+                                        <textarea class="form-control" name="description" id="description" rows="2" placeholder="请输入..." style="resize: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a id="popId" tabindex="0" class="btn btn-lg  btn-primary" role="button" data-toggle="popover" data-trigger="focus"  data-placement="top"
+                               title="信息提示" data-content="And here's some amazing content. It's very engaging. Right?" onclick="submitHandler()" style="width: 70px;height: 46px;line-height: 30px;">保存</a>
+                            <button type="button" class="btn btn-lg  btn-default"  data-dismiss="modal">关闭
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- 新增信息 end -->
+        <script type="text/javascript">
+            var quanxuanuser = "";
+            var shenheusername = "";
+            var guanliyuanstatus = "";
+            $(document).ready(function() {
+
+                $.post("http://localhost:8082/dongtaiuser.action", function (data) {
+                    debugger;
+                    quanxuanuser = data.statuss;
+                    if(quanxuanuser == "2"){
+                        guanliyuanstatus = "普通管理员";
+                    }else if(quanxuanuser == "3"){
+                        guanliyuanstatus = "超级管理员";
+                    }else{
+                        guanliyuanstatus = "待确认";
+                    }
+
+                    var strhtmlll = "<span style=\"background:url("+data.images+") no-repeat center\"> </span> "+
+                        "<div class=\"user-name\">"+
+                        "<p>"+data.name+"<span>"+guanliyuanstatus+"</span></p>"+
+                        " </div>"+
+                        "  <i class=\"lnr lnr-chevron-down\"></i>"+
+                        "    <i class=\"lnr lnr-chevron-up\"></i>"+
+                        "     <div class=\"clearfix\"></div>	";
+
+                    $("#dongtaiuser").append(strhtmlll);
+
+                    shenheusername = data .name;
+                    console.info("登录者:"+shenheusername+"@@@@@@@@@@@@"+"登录者身份:"+quanxuanuser);
+                });
+
+                //表单验证配置
+                $('#infoForm').bootstrapValidator({
+                    message: '不可用的值',
+                    feedbackIcons: {
+                        valid: 'glyphicon glyphicon-ok',
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
+                    },
+                    fields: {
+                        name: {
+                            validators: {
+                                notEmpty: {
+                                    message: '姓名不能为空'
+                                }
+                            }
+                        },
+                        password: {
+                            validators: {
+                                notEmpty: {
+                                    message: '密码不能为空'
+                                }
+                            }
+                        },
+                        address: {
+                            validators: {
+                                notEmpty: {
+                                    message: '家庭住址不能为空'
+                                }
+                            }
+                        },
+                        telephone: {
+                            validators: {
+                                notEmpty: {
+                                    message: '电话号码不能为空'
+                                }
+                            }
+                        },
+                        email: {
+                            validators: {
+                                notEmpty: {
+                                    message: '邮箱不能为空'
+                                }
+                            }
+                        },
+                        images: {
+                            validators: {
+                                notEmpty: {
+                                    message: '头像不能为空'
+                                }
+                            }
+                        }
+                    }
+                });
+
+                //myModal 模态层的隐藏注册事件
+                $("#myModal").on("hide.bs.modal", function () {
+                    $("#infoForm")[0].reset();//使用dom的reset
+                    $("#id").val("");//避免hidden出现不能reset的情况
+                    //重置验证状态
+                    $("#infoForm").data('bootstrapValidator').resetForm();
+                });
+                var oTable = new TableInit();
+                oTable.Init();
+            });
+
+            var TableInit = function () {
+                var oTableInit = new Object();
+                var urlStr = "http://localhost:8082/querytableuser.action";
+                //初始化Table
+                oTableInit.Init = function () {
+                    $('#tb_roles').bootstrapTable({
+                        url: urlStr,         	//请求后台的URL（*）
+                        method: 'post',                      //请求方式（*）
+                        toolbar: '#toolbar',                //工具按钮用哪个容器
+                        striped: true,                      //是否显示行间隔色
+                        cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
+                        pagination: true,                   //是否显示分页（*）
+                        sortable: true,                     //是否启用排序
+                        sortOrder: "asc",                   //排序方式
+                        striped: true, 						//是否显示行间隔色
+                        // sortName:"onDate",
+                        dataType:'json',
+                        queryParamsType : "undefined",
+                        contentType: "application/x-www-form-urlencoded",
+                        queryParams: function queryParams(params) {   //设置查询参数
+                            var param = {
+                                //设置为undefined可以获取pageNumber，pageSize，searchText，sortName，sortOrder
+                                //设置为limit可以获取limit, offset, search, sort, order
+                                pageNo:params.pageNumber,
+                                pageSize:params.pageSize,
+                                orderBy:params.sortName,
+                                orderType:params.sortOrder,
+                                address:$('#addressHH').val(),
+                                telephone:$('#telephoneHH').val(),
+                                name:$('#nameHH').val(),
+                                nicheng:$('#nichengHH').val(),
+                                auditorHH:$('#auditorHH').val(),
+                                searchText:params.searchText
+                            };
+                            return param;
+                        },
+                        sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+                        pageNumber:1,                       //初始化加载第一页，默认第一页
+                        pageSize: 5,                       //每页的记录行数（*）
+                        pageList: [5, 10, 15, 20],        //可供选择的每页的行数（*）
+                        strictSearch: true,
+                        showColumns: true,                  //是否显示所有的列
+                        showRefresh: true,                  //是否显示刷新按钮
+                        minimumCountColumns: 2,             //最少允许的列数
+                        clickToSelect: true,                //是否启用点击选中行
+                        maintainSelected:false,
+                        checkboxHeader:true,
+                        /*  height: 460,   */                     //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
+                        uniqueId: "id",                     //每一行的唯一标识，一般为主键列
+                        showToggle:true,                    //是否显示详细视图和列表视图的切换按钮
+                        cardView: false,                    //是否显示详细视图
+                        detailView: false,                   //是否显示父子表
+                        /*  showExport: true,                     //是否显示导出
+                         exportDataType: "basic",              //basic', 'all', 'selected'. */
+                        onClickRow: function(row, $element) {
+                            //$element是当前tr的jquery对象
+                            // $element.css("background-color", "green");
+                        },//单击row事件
+                        columns: [
+                            {
+                                disabled : true,
+                                checkbox: true,
+                                align: 'center',
+                                valign: 'middle'
+                            },
+                            {
+                                title: 'id',
+                                field: 'id',
+                                align: 'center',
+                                valign: 'middle',
+                                visible:false
+                            },
+                            {
+                                title: '姓名',
+                                field: 'name',
+                                align: 'center',
+                                valign: 'middle'
+                            },
+                            {
+                                title: '密码',
+                                field: 'password',
+                                align: 'center',
+                                valign: 'middle'
+                            },
+                            {
+                                title: '昵称',
+                                field: 'nicheng',
+                                align: 'center',
+                                valign: 'middle'
+                            },
+                            {
+                                title: '客户照片',
+                                field: 'images',
+                                align: 'center',
+                                valign: 'middle',
+                                visible:false
+                            },
+                            {
+                                title: '电话号码',
+                                field: 'telephone',
+                                align: 'center',
+                                valign: 'middle'
+                            },
+                            {
+                                title: '邮箱',
+                                field: 'email',
+                                align: 'center',
+                                valign: 'middle'
+                            },
+                            {
+                                title: '审核人',
+                                field: 'auditor',
+                                align: 'center',
+                                valign: 'middle'
+                            },
+                            {
+                                title: '审核状态',
+                                field: 'auditorstatus',
+                                align: 'center',
+                                valign: 'middle',
+                                formatter:function(value) {
+                                    if (value == '0')
+                                        return '未通过';
+                                    else  if (value == '1')
+                                        return '通过';
+                                    else
+                                        return '请完善';
+                                }
+                            },
+                            {
+                                title: '创建时间',
+                                field: 'createTime',
+                                align: 'center',
+                                valign: 'middle',
+                                visible:false/*,
+                            formatter:dateFormatter,
+                            sortable: true*/
+                            },
+                            {
+                                title: '修改时间',
+                                field: 'updateTime',
+                                align: 'center',
+                                valign: 'middle',
+                                visible:false/*,
+                            formatter:dateFormatter,
+                            sortable: true*/
+                            },
+                            {
+                                title: '描述',
+                                field: 'description',
+                                align: 'center',
+                                valign: 'middle'
+                            },
+                            {
+                                title: '角色',
+                                field: 'statuss',
+                                align: 'center',
+                                valign: 'middle',
+                                visible:false
+                            }
+                        ]
+                    });
+                };
+                return oTableInit;
+            };
+
+            /**查询数据*/
+            function searchDatas() {
+                $('#tb_roles').bootstrapTable('refresh');  //刷新列表
+            }
+
+            /**重置查询条件*/
+            function resetSearchConditions() {
+                $("#searchConditionForm")[0].reset();
+                $('#tb_roles').bootstrapTable('refresh');  //刷新列表
+            }
+
+            /**新增渠道*/
+            function addFun() {
+                $('#myModal').modal('show');
+            }
+            /**修改信息*/
+            function updateFun() {
+                debugger;
+                if(quanxuanuser == "2"){
+                    $.alert({
+                        title: '提示',
+                        content: '普通管理员无修改权限，请通知超级管理员做修改操作！',
+                        type:'red',             //一般危险操作用red,保存成功操作green
+                        buttons: {              //定义按钮
+                            confirm: {
+                                text: '确认',
+                                btnClass: 'btn-primary',
+                                action: function(){ //这里写点击按钮回调函数
+                                }
+                            }
+                        }
+                    });
+                }else{
+                    var rowids = $("#tb_roles").bootstrapTable("getSelections")//获取选中行id(数组)
+                    if(rowids.length <= 0) {
+                        $.alert({
+                            title: '提示',
+                            content: '请选择一行数据修改！',
+                            type:'red',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                    } else if (rowids.length == 1) {
+
+                        $("#id").val(rowids[0].id);
+                        $("#name").val(rowids[0].name);
+                        $("#nicheng").val(rowids[0].nicheng);
+                        $("#password").val(rowids[0].password);
+                        $("#email").val(rowids[0].email);
+                        $("#telephone").val(rowids[0].telephone);
+                        $("#onDate").val(new Date(rowids[0].createTime).format('yyyy-MM-dd'));
+                        $("#offDate").val(new Date(rowids[0].updateTime).format('yyyy-MM-dd'));
+                        $("#description").val(rowids[0].description);
+                        $("#address").val(rowids[0].address);
+                        $("#images").val(rowids[0].images);
+                        $("#auditor").val(rowids[0].auditor);
+                        $("#auditorstatus").val(rowids[0].auditorstatus);
+                        $("#statuss").val(rowids[0].statuss);
+                        $('#myModal').modal('show');
+
+                    } else {
+                        $.alert({
+                            title: '提示',
+                            content: '每次只能选择一行数据修改！',
+                            type:'red',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+
+            /*审核用户*/
+            function shenhe() {
+                if(quanxuanuser == "2") {
+                    $.alert({
+                        title: '提示',
+                        content: '只有超级管理员拥有审核权力，普通管理员无审核权力！',
+                        type: 'red',             //一般危险操作用red,保存成功操作green
+                        buttons: {              //定义按钮
+                            confirm: {
+                                text: '确认',
+                                btnClass: 'btn-primary',
+                                action: function () { //这里写点击按钮回调函数
+                                }
+                            }
+                        }
+                    });
+                }else{
+                    var arr = $('#tb_roles').bootstrapTable('getSelections');
+                    if(arr.length>0){
+                        $.confirm({
+                            title: '提示',
+                            content: '您确认需要审核选中的数据吗？',
+                            type:'red',
+                            icon:'glyphicon glyphicon-question-sign',
+                            buttons: {
+                                ok: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //确认按钮回调
+                                        shenheshuju();
+                                    }
+                                },
+                                cancel: {
+                                    text: '取消',
+                                    action: function(){ //取消按钮回调
+                                    }
+                                }
+                            }
+                        });
+                    } else {
+                        $.alert({
+                            title: '提示',
+                            content: '请选择一行数据进行审核！',
+                            type:'red',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                    }
+
+                }
+            }
+
+            function shenheshuju(){
+                var rowids = $("#tb_roles").bootstrapTable("getSelections");
+                var ids="";
+                for (var i=0;i<rowids.length;i++)
+                {
+
+                    ids+=rowids[i].id +",";
+                }
+                if(ids.length >0){
+                    ids=ids.substring(0,ids.length);
+                }
+                console.log(ids);
+                $.post("http://localhost:8082/shenheuser.action", {"ids": ids,"shenheusername":shenheusername}, function(data) {
+
+                    if (data || data=='true') {
+                        $.alert({
+                            title: '提示',
+                            content: '审核成功！',
+                            type:'green',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                        $('#tb_roles').bootstrapTable('refresh');  //刷新列表
+                    } else {
+                        $.alert({
+                            title: '提示',
+                            content: '审核失败失败！',
+                            type:'red',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }, 'json');
+            }
+
+            /**删除数据*/
+            function deleteFun() {
+                if(quanxuanuser == "2"){
+                    $.alert({
+                        title: '提示',
+                        content: '普通管理员无删除权限，请通知超级管理员做删除操作！',
+                        type:'red',             //一般危险操作用red,保存成功操作green
+                        buttons: {              //定义按钮
+                            confirm: {
+                                text: '确认',
+                                btnClass: 'btn-primary',
+                                action: function(){ //这里写点击按钮回调函数
+                                }
+                            }
+                        }
+                    });
+                }else{
+                    var arr = $('#tb_roles').bootstrapTable('getSelections');
+                    if(arr.length>0){
+                        $.confirm({
+                            title: '提示',
+                            content: '您确认需要删除选中的数据吗？',
+                            type:'red',
+                            icon:'glyphicon glyphicon-question-sign',
+                            buttons: {
+                                ok: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //确认按钮回调
+                                        deleteTask();
+                                    }
+                                },
+                                cancel: {
+                                    text: '取消',
+                                    action: function(){ //取消按钮回调
+                                    }
+                                }
+                            }
+                        });
+                    } else {
+                        $.alert({
+                            title: '提示',
+                            content: '请选择一行数据删除！',
+                            type:'red',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+
+            function deleteTask(){
+                var delUrl = $("#batchDeleteUrl").val();
+                var rowids = $("#tb_roles").bootstrapTable("getSelections");
+                var ids="";
+                for (var i=0;i<rowids.length;i++)
+                {
+
+                    ids+=rowids[i].id +",";
+                }
+                if(ids.length >0){
+                    ids=ids.substring(0,ids.length);
+                }
+                console.log(ids);
+                $.post("http://localhost:8082/deleteuser.action", {"ids": ids}, function(data) {
+                    console.log("delUrl" + delUrl);
+                    if (data || data=='true') {
+                        $.alert({
+                            title: '提示',
+                            content: '删除成功！',
+                            type:'green',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                        $('#tb_roles').bootstrapTable('refresh');  //刷新列表
+                    } else {
+                        $.alert({
+                            title: '提示',
+                            content: '删除失败！',
+                            type:'red',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }, 'json');
+            }
+
+            /**表单提交事件*/
+            function submitHandler() {
+                debugger;
+                var bootstrapValidator = $("#infoForm").data('bootstrapValidator');
+                if(bootstrapValidator.validate().isValid()){
+                    /* 验证邮箱和电话号码 */
+                    var emil=new RegExp("^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$");
+                    if(emil.test($("#email").val())){
+                        console.info("=====");
+                        //return true;
+                    }else{
+                        $.alert({
+                            title : '提示',
+                            content : '请输入正确的邮箱！！',
+                            type : 'red', //一般危险操作用red,保存成功操作green
+                            buttons : { //定义按钮
+                                confirm : {
+                                    text : '确认',
+                                    btnClass : 'btn-primary',
+                                    action : function() { //这里写点击按钮回调函数
+
+                                    }
+                                }
+                            }
+                        });
+                        return false;
+                    }
+                    var dianhua=new RegExp("^[1][3,4,5,7,8][0-9]{9}$")
+                    if(dianhua.test($("#telephone").val())){
+                        console.info("=====");
+                        //return true;
+                    }else{
+                        $.alert({
+                            title : '提示',
+                            content : '请输入正确的电话号码！！',
+                            type : 'red', //一般危险操作用red,保存成功操作green
+                            buttons : { //定义按钮
+                                confirm : {
+                                    text : '确认',
+                                    btnClass : 'btn-primary',
+                                    action : function() { //这里写点击按钮回调函数
+
+                                    }
+                                }
+                            }
+                        });
+                        return false;
+                    }
+                    var createUrl = "http://localhost:8082/adduser.action"
+                    debugger;
+                    $.post(createUrl, $("#infoForm").serialize(), function(data) {
+                        debugger;
+                        console.log(data);
+                        if (data == true) {
+                            debugger;
+                            $.alert({
+                                title: '提示',
+                                content: '保存成功！',
+                                type:'green',             //一般危险操作用red,保存成功操作green
+                                buttons: {              //定义按钮
+                                    confirm: {
+                                        text: '确认',
+                                        btnClass: 'btn-primary',
+                                        action: function(){ //这里写点击按钮回调函数
+                                        }
+                                    }
+                                }
+                            });
+                            $('#myModal').modal('hide');
+                            $("#tb_roles").bootstrapTable('refresh');
+                            $("#infoForm").data('bootstrapValidator').resetForm();
+                        } else if (data == "repeat"){
+                            debugger;
+                            $.alert({
+                                title: '提示',
+                                content: '姓名重复！',
+                                type:'red',             //一般危险操作用red,保存成功操作green
+                                buttons: {              //定义按钮
+                                    confirm: {
+                                        text: '确认',
+                                        btnClass: 'btn-primary',
+                                        action: function(){ //这里写点击按钮回调函数
+                                        }
+                                    }
+                                }
+                            });
+                        }else {
+                            debugger;
+                            $.alert({
+                                title: '提示',
+                                content: '保存失败！',
+                                type:'red',             //一般危险操作用red,保存成功操作green
+                                buttons: {              //定义按钮
+                                    confirm: {
+                                        text: '确认',
+                                        btnClass: 'btn-primary',
+                                        action: function(){ //这里写点击按钮回调函数
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    }, 'json');
+                } else {
+                    $.alert({
+                        title: '提示',
+                        content: '请按照相关提示修改！',
+                        type:'red',             //一般危险操作用red,保存成功操作green
+                        buttons: {              //定义按钮
+                            confirm: {
+                                text: '确认',
+                                btnClass: 'btn-primary',
+                                action: function(){ //这里写点击按钮回调函数
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+            /**日期格式化*/
+            function dateFormatter(value) {
+                if(value!=null){
+                    value = new Date(parseInt(value)).format("yyyy-MM-dd");
+                }
+                return value;
+            }
+
+
+            function zhuxiao(){
+                debugger;
+                $.post("http://localhost:8082/zhuxiaohoutai.action", $("#infoForm").serialize(), function(data) {
+                    if(data == true){
+                        $.alert({
+                            title: '提示',
+                            content: '注销成功！',
+                            type:'green',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                        window.location.href="login_login.html";
+                                    }
+                                }
+                            }
+                        });
+                    }else{
+                        $.alert({
+                            title: '提示',
+                            content: '注销失败！',
+                            type:'red',             //一般危险操作用red,保存成功操作green
+                            buttons: {              //定义按钮
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'btn-primary',
+                                    action: function(){ //这里写点击按钮回调函数
+                                    }
+                                }
+                            }
+                        });
+                    }
+                })
+            }
+        </script>
+
+
+
+
+    </div>
+    </div>
+    <!--footer section start-->
+    <footer>
+        <p>Copyright &copy; 2019.药品数据管理后台系统. <a href="http://www.cssmoban.com/" target="_blank" title=""></a> <a href="http://www.cssmoban.com/" title="" target="_blank">----kakurry工作室</a>
+        </p>
+    </footer>
+    <!--footer section end-->
+</section>
+
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

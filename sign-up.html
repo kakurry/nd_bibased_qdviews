@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>注册页面</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<!-- chart -->
+<script src="js/Chart.js"></script>
+<!-- //chart -->
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+<!----webfonts--->
+<link href='http://fonts.useso.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<!---//webfonts---> 
+ <!-- Meters graphs -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<!-- Placed js at the end of the document so the pages load faster -->
+
+</head> 
+   
+ <body class="sign-in-up">
+    <section>
+			<div id="page-wrapper" class="sign-in-wrapper">
+				<div class="graphs">
+					<div class="sign-up">
+						<h3>在这里注册</h3>
+						<p class="creating">关于我们的药品数据管理平台适合这个层次的人群使用，因为它操作简单，方便快捷！！</p>
+						<h5>登录信息部分</h5>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>姓名:</h4>
+							</div>
+							<div class="sign-up2">
+								<form>
+									<input type="text" placeholder=" " id="name" required=" "/>
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>密码 :</h4>
+							</div>
+							<div class="sign-up2">
+								<form>
+									<input type="text" placeholder=" " id="password" required=" "/>
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+
+						<h6>详细信息部分</h6>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>Email :</h4>
+							</div>
+							<div class="sign-up2">
+								<form>
+									<input type="password" placeholder=" " id="email" required=" "/>
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>Telephone:</h4>
+							</div>
+							<div class="sign-up2">
+								<form>
+									<input type="text" placeholder=" " id="telephone" required=" "/>
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>家庭住址:</h4>
+							</div>
+							<div class="sign-up2">
+								<form>
+									<input type="text" placeholder=" " id="address" required=" "/>
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="sub_home">
+							<div class="sub_home_left">
+								<form>
+									<input type="submit" onclick="zhuce()" value="提交">
+								</form>
+							</div>
+							<div class="sub_home_right">
+								<p>返回 <a href="index.html">Home</a></p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<script>
+            function zhuce(){
+                if($("#name").val() !=""&&$("#password").val()!= ""&&$("#email").val()!= ""&&$("#telephone").val()!= ""&&$("#address").val()!= ""){
+                    $.post("http://localhost:8082/zhuceguanliyuan.action",{"name":$("#username").val(),"password":$("#password").val(),"email":$("#email").val(),"telephone":$("#telephone").val(),"address":$("#address").val()}, function(data) {
+                        if(data == true){
+                            alert("恭喜你，注册成功！")
+                            window.location.href="index.html";
+                        }else{
+                            alert("抱歉，注册失败，请检查信息是否正确！")
+                        }
+                    })
+                }else{
+                    alert("请完善信息，再提交注册！！")
+                }
+
+            }
+
+		</script>
+		<!--footer section start-->
+			<footer>
+				<p>Copyright &copy; 2019.药品数据管理后台系统. <a href="http://www.cssmoban.com/" target="_blank" title=""></a> <a href="http://www.cssmoban.com/" title="" target="_blank">----kakurry工作室</a>
+				</p>
+			</footer>
+        <!--footer section end-->
+	</section>
+	
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
